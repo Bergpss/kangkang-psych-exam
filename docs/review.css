@@ -14,6 +14,11 @@
 .scope-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:13px;line-height:1.8;color:#46564d}
 .legend{margin:16px 0 0;padding-top:14px;border-top:1px dashed #c9d5c1;font-size:11px;line-height:1.75;color:#6c7a6e}
 
+.prompt-card{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:start;margin:18px 0 0;padding:20px 24px;background:#fbf8ef;border:1px solid #e6dcc4;border-radius:14px}
+.prompt-label{padding-top:4px;font-size:9px;font-weight:600;letter-spacing:1.4px;color:#8b5a20;white-space:nowrap}
+.prompt-card blockquote{margin:0;font:600 19px/1.7 var(--serif);color:#4a4033}
+.prompt-card p{margin:8px 0 0;font-size:11px;line-height:1.75;color:#8b826f}
+
 .original-answer{margin:18px 0 0;padding:14px 18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:12px}
 .original-answer summary{cursor:pointer;font-size:12px;letter-spacing:.4px;color:#5d6b62}
 .answer-text{display:grid;gap:12px;margin-top:16px}
@@ -107,6 +112,8 @@
   .review-lede{font-size:14px}
   .scope-card{padding:20px 18px}
   .scope-card ul{font-size:12px}
+  .prompt-card{grid-template-columns:1fr;gap:8px;padding:18px}
+  .prompt-card blockquote{font-size:17px}
   .review-head h2{font-size:25px}
   .review-summary{font-size:13px;padding:14px 15px}
   .subhead{font-size:19px;margin-top:34px}

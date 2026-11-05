@@ -163,6 +163,11 @@ hero = f'''<section class="review-hero">
 
 scope = f'''<section class="scope-card"><h2>先划边界</h2><ul>{''.join(f'<li>{escape(x)}</li>' for x in review_data['scope'])}</ul><p class="legend">{escape(review_data['legend'])}</p></section>'''
 
+prompt = review_data.get('prompt')
+prompt_block = ''
+if prompt:
+    prompt_block = f'''<section class="prompt-card"><span class="prompt-label">题目材料 · 用户补充</span><div><blockquote>{escape(prompt['text'])}</blockquote><p>{escape(prompt['note'])}</p></div></section>'''
+
 answer_text = ''.join(f'<div class="answer-item"><h4>{escape(s["title"])}</h4><p>{escape(s["text"])}</p></div>'
                       for s in q2['sections'])
 answer_block = f'''<details class="original-answer"><summary>第二题已确认转写（{len(q2['sections'])} 段）</summary><div class="answer-text">{answer_text}</div></details>'''
@@ -172,22 +177,29 @@ reviews_html = ''.join(review_html(r) for r in review_data['reviews'])
 review_template = (ROOT / 'scripts/review-q2.html').read_text()
 review_template = review_template.replace('<!-- HERO -->', hero)
 review_template = review_template.replace('<!-- SCOPE -->', scope)
+review_template = review_template.replace('<!-- PROMPT -->', prompt_block)
 review_template = review_template.replace('<!-- ANSWER -->', answer_block)
 review_template = review_template.replace('<!-- REVIEWS -->', reviews_html)
 (ROOT / 'docs/review-q2.html').write_text(review_template)
 
 # ------------------------------------------------------------- review Markdown
 for r in review_data['reviews']:
+    if r.get('generateMarkdown', True) is False:
+        continue
     lines = [f"# 第二题批改 · {review_data['questionTitle']}", '',
              f"- 审阅者/模型：{r['model']}",
              f"- 日期：{r['date']}",
              f"- 转写版本/commit：v{review_data['transcriptVersion']} / {review_data['commit']}",
-             "- 题干是否齐全：否。仅有答案与页眉「三、论述题（3×25′）」，完整题干未提供。",
+             "- 题干是否齐全：部分。用户补充了谚语材料，但完整设问、分值要求与官方评分细则未提供。",
              "- 题目标题：由答案内容概括，不是原题干文字。",
              "- 已确认/存疑内容：第二题转写经康康确认（Berg 于 2026-11-05 对话转述）；第一题不在本文范围。",
              "- 结论适用范围：仅第二题；无官方评分细则，风险等级为辅导判断。", '',
-             f"> {r['summary']}", '',
-             "## 优先处理的三个问题", '']
+             f"> {r['summary']}", '']
+    if prompt:
+        lines += ["## 题目材料（用户补充）", '',
+                  f"> {prompt['text']}", '',
+                  prompt['note'], '']
+    lines += ["## 优先处理的三个问题", '']
     for i, p in enumerate(r['priorities'], 1):
         lines += [f"### {i}. {p['title']}", '',
                   f"- 性质：{p['nature']}",

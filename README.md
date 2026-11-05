@@ -5,7 +5,7 @@
 **当前阶段：第二题批改完成；第一题手写转写待核对。**
 
 - [打开核对页面](https://bergpss.github.io/kangkang-psych-exam/)
-- [第二题批改报告](https://bergpss.github.io/kangkang-psych-exam/review-q2.html)（模型名默认模糊，点击显示）
+- [第二题批改报告](https://bergpss.github.io/kangkang-psych-exam/review-q2.html)（以「三个和尚没水喝」为材料；多份独立审阅，模型名默认模糊，点击显示）
 - [阅读转写 Markdown](transcripts/2026-11-05.md)
 - [查看原始 PDF](docs/assets/2026-11-05-original.pdf)
 - [AI Agent 接手入口](AGENTS.md)

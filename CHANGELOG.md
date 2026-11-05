@@ -1,5 +1,13 @@
 # 变更记录
 
+## 2026-11-05 · 第二题题目材料补充与三份审阅并列（v1.2）
+
+- 用户补充第二题材料：「一个和尚挑水喝，二个和尚抬水喝，三个和尚没水喝」。
+- 批改修订：第一优先问题改为「1 人基线被 5 人组替掉」，第三点改为「『没水』是质变，不是线性下降」；新增题目材料卡片与「材料与操作化」复习项。
+- 共享页并列 3 份独立审阅：DeepSeek-V4.1-Flash Max、grok bot、GPT-6 Astra High；模型名默认模糊，点击后显示。
+- GPT-6 Astra High 另有独立页 `docs/review-q2-astra.html`（独立数据源与构建脚本）；共享页渲染其审阅，其独立 Markdown 由 `generateMarkdown:false` 保留，不被 `scripts/build.py` 重写。
+- 未改原答案文字；完整题干与官方评分细则仍未提供。
+
 ## 2026-11-05 · 第二题独立审阅（grok bot）
 
 - 新增独立审阅 `reviews` 数组第 2 条，模型标注 **grok bot**（slug: `grok-bot`）；不覆盖 DeepSeek 原意见。
