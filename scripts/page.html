@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="康康的心理实验设计手写答卷：对照原稿、逐段核对、导出修改意见。">
+  <meta name="theme-color" content="#193f39"><title>康康 · 手写答卷核对</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#workbench">跳到答卷</a>
+<header class="topbar"><a class="brand" href="./"><span class="brand-icon">康</span><span>康康的备考手记<span class="brand-small">PSYCHOLOGY · 一题一进步</span></span></a><a class="repo-link" href="https://github.com/Bergpss/kangkang-psych-exam" target="_blank" rel="noopener">项目资料 ↗</a></header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><div class="eyebrow"><span class="dot"></span> 11月5日练习 · 转写核对版</div><h1>先把每一个字，<br><em>看准确。</em></h1><p>康康，这是你的两道实验设计答卷。<br>先核对手写识别，再一起找出能提分的地方。</p><a class="primary-button" href="#workbench">开始核对 <span>↓</span></a></div>
+    <div class="hero-card"><span class="eyebrow">本次练习</span><div class="sheet-lines"><div><strong>01</strong><span>听力与任务表现</span></div><div><strong>02</strong><span>团体人数与社会惰性</span></div></div><div class="hero-stats"><span><strong>2</strong> 页原稿</span><span><strong>16</strong> 段答案</span><span class="status-pill">待你核对</span></div><p>仅转写，不是参考答案或判题结果。</p></div>
+  </section>
+  <section class="stage-strip" aria-label="项目进度"><div class="active"><span>01</span><strong>核对转写</strong><small>现在进行</small></div><div><span>02</span><strong>分析失分点</strong><small>核对后展开</small></div><div><span>03</span><strong>生成复习建议</strong><small>形成可执行清单</small></div></section>
+  <section class="attention"><div><span class="tag amber">优先看这里</span><h2>还有几处，需要你的眼睛。</h2><p>“缺乏”已按补充录入。材料涂改、“空测”、40 min、红笔分值仍需核对。完整题干和批注作者也待补充。</p></div><button class="outline-button" type="button" id="jump-uncertain">定位第一处存疑 ↓</button></section>
+  <section id="workbench" class="workbench">
+    <div class="workbench-top"><div><span class="eyebrow">YOUR ANSWER SHEETS</span><h2>逐段对照，轻松确认</h2></div><a href="transcript.md" download="2026-11-05-转写.md" class="text-button">下载转写 Markdown ↓</a></div>
+    <div class="tabs" role="tablist" aria-label="选择题目"><button type="button" id="tab-q1" role="tab" aria-selected="true" aria-controls="panel-q1" data-tab="q1"><span>01</span> 听力与任务表现</button><button type="button" id="tab-q2" role="tab" aria-selected="false" aria-controls="panel-q2" data-tab="q2" tabindex="-1"><span>02</span> 团体人数与社会惰性</button></div>
+    <p class="transcription-rule">黑笔答案按原意转写；【方括号】为识别存疑或编辑说明。勾选表示“识别准确”，不表示“知识正确”。</p>
+    <!-- QUESTIONS -->
+  </section>
+  <section class="finish-card"><div><span class="eyebrow">ONE MORE THING</span><h2>核对完，把修改带回来。</h2><p>可以补充题干、红笔批注作者，或其他需要说明的地方。</p></div><label for="overall" class="sr-only">其他核对说明</label><textarea id="overall" rows="4" placeholder="例如：红笔是……批改的；第一题完整题干是……"></textarea><div class="finish-actions"><button type="button" class="primary-button" id="export">导出核对意见 ↓</button><button type="button" class="outline-button" id="copy">复制核对意见</button></div><p class="local-notice">进度只保存在当前浏览器。导出或复制后发给 Berg / 判题 AI，才会进入下一步；此页面不会自动提交。</p></section>
+  <details class="project-details"><summary>这份资料怎么使用？</summary><p>这是康康备考深大应用心理研究生的实验设计练习，当前阶段只确认转写。正式判题将区分知识描述、实验逻辑与应试规范，突出优先修改项，并给出简洁的考场表达与复习建议。</p><p>题目标题是根据答案概括的；缺少完整题干时，不给出貌似精确的官方分数。其他 AI 请先阅读仓库中的 AGENTS.md。</p><a href="https://github.com/Bergpss/kangkang-psych-exam/blob/main/AGENTS.md" target="_blank" rel="noopener">查看 AI 接手流程 ↗</a></details>
+</main>
+<footer><span>康康的备考手记</span><span>转写 v0.1.0 · 2026.11.05</span><span>慢一点核准，再快一点进步。</span></footer>
+<div class="progress-dock"><div><strong id="progress-label">0 / 16 段已核对</strong><div class="progress-track"><div id="progress-fill"></div></div></div><a href="#overall">补充 / 导出 ↗</a></div>
+<dialog id="original-dialog" aria-labelledby="original-title"><div class="dialog-top"><h2 id="original-title">手写原稿</h2><button type="button" id="close-dialog" class="outline-button">关闭 ×</button></div><p>可滚动查看；需要更大原稿时，点击“新窗口打开”。</p><a id="full-image" target="_blank" rel="noopener">新窗口打开原图 ↗</a><img id="dialog-image" alt="放大的手写答卷原稿"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script id="transcript-data" type="application/json">/* DATA */</script><script src="app.js"></script>
+</body>
+</html>
