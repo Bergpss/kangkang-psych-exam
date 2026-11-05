@@ -1,0 +1,12 @@
+/* 核对页上的第二题批改入口 */
+.tag.green{background:#dce5d2;color:var(--green)}
+.review-callout{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:24px 0 40px;padding:24px 27px;background:#e7eddf;border-radius:12px}
+.review-callout h2{font:20px var(--serif);margin:12px 0 8px}
+.review-callout p{max-width:640px;margin:0;font-size:12px;color:#6d776b}
+.review-callout .primary-button{flex-shrink:0;white-space:nowrap}
+@media(max-width:700px){
+  .review-callout{display:block;padding:20px}
+  .review-callout h2{font-size:19px}
+  .review-callout p{font-size:11px}
+  .review-callout .primary-button{margin-top:15px}
+}

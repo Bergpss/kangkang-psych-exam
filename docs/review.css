@@ -1,0 +1,131 @@
+/* 第二题批改页 —— 复用 style.css 的纸色、墨色与字体变量 */
+.review-main{max-width:1000px;margin:0 auto;padding:0 36px 24px}
+.topbar-links{display:flex;align-items:center;gap:20px}
+
+.review-hero{padding:62px 0 30px;border-bottom:1px solid var(--line)}
+.review-hero h1{font:600 clamp(38px,6.4vw,62px)/1.12 var(--serif);letter-spacing:-1px;margin:18px 0 16px}
+.review-lede{max-width:720px;margin:0;font-size:16px;line-height:1.85;color:#4a5a53}
+.review-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.meta-chip{font-size:10px;letter-spacing:.4px;color:#5a675f;background:#eceee5;border:1px solid #dfe3d8;border-radius:999px;padding:5px 10px}
+.blur-note{margin:14px 0 0;font-size:11px;color:#8b948a}
+
+.scope-card{margin:28px 0 0;padding:24px 26px;background:var(--mint);border:1px solid #dbe3d3;border-radius:14px}
+.scope-card h2{font:600 19px/1.4 var(--serif);margin:0 0 12px}
+.scope-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:13px;line-height:1.8;color:#46564d}
+.legend{margin:16px 0 0;padding-top:14px;border-top:1px dashed #c9d5c1;font-size:11px;line-height:1.75;color:#6c7a6e}
+
+.original-answer{margin:18px 0 0;padding:14px 18px;background:rgba(255,255,255,.6);border:1px solid var(--line);border-radius:12px}
+.original-answer summary{cursor:pointer;font-size:12px;letter-spacing:.4px;color:#5d6b62}
+.answer-text{display:grid;gap:12px;margin-top:16px}
+.answer-item h4{margin:0 0 3px;font-size:10px;letter-spacing:1.1px;color:var(--muted);font-weight:600}
+.answer-item p{margin:0;font-size:13px;line-height:1.85;color:#33443c;white-space:pre-line}
+
+.review{margin:44px 0 0;padding-top:34px;border-top:1px solid var(--line)}
+.review-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px}
+.review-index{font-size:10px;letter-spacing:1.6px;color:var(--muted);font-weight:600}
+.review-head h2{margin:8px 0 6px;font:600 32px/1.25 var(--serif)}
+.review-head p{margin:0;font-size:11px;color:#8a9389}
+.review-summary{margin:18px 0 4px;padding:16px 18px;background:#f0f3ea;border-left:3px solid var(--green);border-radius:0 10px 10px 0;font-size:14px;line-height:1.8;color:#35473f}
+
+.model-stamp{display:inline-flex;align-items:center;gap:9px;flex-shrink:0;padding:7px 11px;background:var(--white);border:1px dashed #c3cfc0;border-radius:999px}
+.stamp-label{font-size:9px;letter-spacing:1px;color:#8d968c}
+.model-id{display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer}
+.model-text{font-size:11px;font-weight:650;letter-spacing:.3px;filter:blur(7px);opacity:.5;white-space:nowrap;user-select:none;transition:filter .25s ease,opacity .25s ease}
+.model-id:hover .model-text{opacity:.62}
+.model-id.revealed .model-text{filter:none;opacity:1;user-select:text}
+.model-hint{font-size:9px;color:#8d968c;border-bottom:1px dotted #b9c4b6;white-space:nowrap}
+.model-id.revealed .model-hint{display:none}
+.model-id:focus-visible{outline:2px solid #6c8b78;outline-offset:3px;border-radius:4px}
+
+.subhead{display:flex;align-items:center;gap:10px;margin:40px 0 16px;font:600 21px/1.4 var(--serif)}
+.subhead span{padding:5px 7px;border:1px solid #c9d5c1;border-radius:999px;font:600 10px/1 var(--sans);letter-spacing:1px;color:var(--green)}
+
+.priority-list{display:grid;gap:20px;margin:0;padding:0;list-style:none}
+.priority-card{padding:26px 26px 20px;background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 36px -32px rgba(32,59,53,.45)}
+.priority-head{display:flex;align-items:flex-start;gap:13px;margin-bottom:18px}
+.rank{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:30px;height:30px;margin-top:2px;border-radius:50%;background:var(--green);color:#fff;font:600 11px/1 var(--sans)}
+.priority-title{flex:1;min-width:0}
+.priority-title h3{margin:0;font:600 20px/1.45 var(--serif)}
+.priority-title p{margin:4px 0 0;font-size:11px;color:#8c948a}
+.risk{flex-shrink:0;padding:4px 9px;border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.3px;white-space:nowrap}
+.risk-high{background:#f6e3dd;color:#a1442c}
+.risk-mid{background:#f8eed8;color:#8a5a18}
+.risk-low{background:#e4eee2;color:#3e6b4d}
+.quote{margin:0 0 18px;padding:13px 16px;background:#fbf8ef;border-left:3px solid #c99a4e;border-radius:0 8px 8px 0;font-size:13.5px;line-height:1.8;color:#4a4033}
+
+.fix-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 30px;margin:0}
+.fix-grid>div{min-width:0}
+.fix-grid .wide{grid-column:1 / -1}
+.fix-grid dt{margin-bottom:5px;font-size:9px;font-weight:600;letter-spacing:1.4px;color:#969e94}
+.fix-grid dd{margin:0;font-size:13.5px;line-height:1.85;color:#33443c}
+.exam-line{padding:10px 13px;background:#f3f6ee;border-radius:8px;color:#2f4a3d}
+
+.evidence{margin:20px 0 0;padding-top:12px;border-top:1px dashed var(--line)}
+.evidence summary{cursor:pointer;font-size:11px;letter-spacing:.3px;color:#889187}
+.evidence ul{margin:10px 0 0;padding-left:18px;font-size:12px;line-height:1.8;color:#5c6a60}
+.evidence p{margin:8px 0 0;font-size:11.5px;line-height:1.7;color:#859085}
+.evidence a{color:#2f5d4b}
+
+.other-block{margin:34px 0 0;padding:18px 24px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:14px}
+.other-block>summary{display:flex;align-items:center;gap:9px;font:600 16px/1.5 var(--serif);list-style:none;cursor:pointer}
+.other-block>summary::-webkit-details-marker{display:none}
+.other-block>summary span{padding:4px 6px;border:1px solid #c9d5c1;border-radius:999px;font:600 9px/1 var(--sans);letter-spacing:1px;color:var(--green)}
+.other-block>summary::after{content:'＋';margin-left:auto;color:#8a9489;font-size:14px}
+.other-block[open]>summary::after{content:'－'}
+.issue{padding:18px 0 2px;margin-top:18px;border-top:1px solid var(--line)}
+.issue:first-of-type{margin-top:6px;border-top:0}
+.issue-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.issue h4{margin:0;font:600 15px/1.4 var(--serif)}
+.issue-head .risk{margin-left:auto}
+.issue p{margin:5px 0;font-size:13px;line-height:1.8;color:#3f4f47}
+.mini-label{display:inline-block;margin-right:8px;font-size:9px;font-weight:600;letter-spacing:1.2px;color:#99a097}
+
+.section-note{margin:-6px 0 14px;font-size:11px;color:#8b948a}
+.answer-outline{display:grid;gap:12px;margin:0;padding:0;list-style:none;counter-reset:step}
+.answer-outline li{position:relative;padding:16px 18px 16px 54px;background:var(--white);border:1px solid var(--line);border-radius:12px}
+.answer-outline li::before{counter-increment:step;content:counter(step,decimal-leading-zero);position:absolute;left:18px;top:17px;font:600 10px/1 var(--sans);color:var(--green)}
+.answer-outline h4{margin:0 0 4px;font:600 13px/1.5 var(--sans);color:#2f4a3d}
+.answer-outline p{margin:0;font-size:13px;line-height:1.8;color:#3f4f47}
+
+.plan-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+.plan-list li{padding:16px 18px;background:#f2f4ec;border:1px solid #e2e6da;border-radius:12px}
+.plan-list h4{margin:0 0 5px;font:600 13.5px/1.5 var(--sans);color:#2f4a3d}
+.plan-list p{margin:0;font-size:12.5px;line-height:1.8;color:#45544b}
+.plan-check{margin-top:8px!important;padding-top:8px;border-top:1px dashed #d3dac9;font-size:11.5px!important;color:#3f6b50!important}
+
+.disagreement ul{display:grid;gap:8px;margin:0;padding-left:18px;font-size:13px;line-height:1.8;color:#45544b}
+
+@media(max-width:900px){
+  .review-main{padding:0 26px 24px}
+  .review-head{flex-direction:column;gap:14px}
+  .model-stamp{align-self:flex-start}
+}
+@media(max-width:700px){
+  .review-main{padding:0 20px 10px}
+  .review-hero{padding:38px 0 24px}
+  .review-hero h1{font-size:38px}
+  .review-lede{font-size:14px}
+  .scope-card{padding:20px 18px}
+  .scope-card ul{font-size:12px}
+  .review-head h2{font-size:25px}
+  .review-summary{font-size:13px;padding:14px 15px}
+  .subhead{font-size:19px;margin-top:34px}
+  .priority-card{padding:20px 18px 16px}
+  .priority-head{display:grid;grid-template-columns:30px minmax(0,1fr);gap:7px 13px}
+  .priority-head .rank{grid-row:1 / span 2}
+  .priority-title{grid-column:2}
+  .priority-head .risk{grid-column:2;justify-self:start;margin-left:0}
+  .priority-title h3{font-size:18px}
+  .fix-grid{grid-template-columns:1fr;gap:16px}
+  .other-block{padding:16px}
+  .answer-outline li{padding:15px 16px 15px 48px}
+  .answer-outline li::before{left:16px;top:16px}
+  .topbar-links{gap:12px}
+  .topbar-links .repo-link{font-size:10px}
+}
+@media(max-width:420px){
+  .review-hero h1{font-size:34px}
+}
+@media(prefers-reduced-motion:reduce){
+  .model-text{transition:none}
+}
